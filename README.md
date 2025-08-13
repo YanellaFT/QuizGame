@@ -1,1 +1,1 @@
-# CurrencyConverter
+# QuizGame
