@@ -8,6 +8,7 @@ choice = input("Enter 1, 2, 3: ")
 
 if choice == "1": 
     print()
+    print()
     print("TIME CONVERTER")
     print()
     print("This program converts seconds to minutes, hours, days, weeks, months, and years.")
@@ -37,5 +38,34 @@ if choice == "1":
     print("Thank you for using the Time Converter! Refresh to choose another option.")
 elif choice == '2':
     print()
+    print()
 elif choice == '3':
     print()
+    print()
+    print("LENGTH CONVERTER")
+    print()
+    print("This program converts inches to feet, yards, miles, millimeters, centimeters, meters, and kilometers.")
+    print()
+    inches = input("How many inches would you like to convert? ")
+    print()
+
+    feet = int(inches) / 12 #inches to feet
+    print(str(feet) + " feet")
+
+    yards = int(feet) / 3 #feet to yards
+    print(str(yards) + " yards")
+
+    miles = int(yards) / 1760 #yards to miles
+    print(str(miles) + " miles")
+
+    millimeters = int(inches) * 25.4 #inches to millitmeters
+    print(str(millimeters) + " millimeters")
+
+    centimeters = int(millimeters) * 10 #millimeters to centimeters
+    print(str(centimeters) + " centimeters")
+
+    meters = int(centimeters) * 100 #centimeters to meters
+    print(str(meters) + " meters")
+
+    kilometers = int(meters) / 1000 #meters to kilometers
+    print(str(kilometers) + " kilometers")
