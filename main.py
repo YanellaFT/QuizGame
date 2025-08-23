@@ -61,11 +61,14 @@ elif choice == '3':
     millimeters = int(inches) * 25.4 #inches to millitmeters
     print(str(millimeters) + " millimeters")
 
-    centimeters = int(millimeters) * 10 #millimeters to centimeters
+    centimeters = int(inches) * 2.54 #inches to centimeters
     print(str(centimeters) + " centimeters")
 
-    meters = int(centimeters) * 100 #centimeters to meters
+    meters = int(inches) / 39.37 #inches to meters
     print(str(meters) + " meters")
 
-    kilometers = int(meters) / 1000 #meters to kilometers
+    kilometers = int(inches) / 39370 #inches to kilometers
     print(str(kilometers) + " kilometers")
+
+    print()
+    print("Thank you for using the Length Converter! Refresh to choose another option.")
