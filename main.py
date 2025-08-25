@@ -4,8 +4,10 @@ print("1. Time Converter: converts seconds to minutes, hours, days, weeks, month
 print("2. Roman Numeral Converter: roman numerals to integers")
 print("3. Length Converter: converts inches to feet, yards, miles, millimeters, centimeters, meters, and kilometers")
 print("4. Quiz Game: a fun quiz game")
+print("5. Random Number Generator: generates a random number between two numbers of your choice")
+print("6. Hangman: guess the word one letter at a time")
 print()
-choice = input("Enter 1, 2, 3, 4: ")
+choice = input("Enter 1, 2, 3, 4, 5, 6: ")
 
 if choice == "1": 
     print()
@@ -172,3 +174,217 @@ elif choice == '4':
     print("Results: You got " + str(score) + " out of 6 points correct!")
     print()
     print("Thank you for playing the Quiz Game! Refresh to choose another option.")
+elif choice == '5':
+    print()
+    print()
+    print("RANDOM NUMBER GENERATOR")
+    print()
+    print("Choose a minimum and a maximum number, and this program will choose a random number between them.")
+    print()
+
+    import random
+    minimum = input("Enter the minimum number: ")
+    maximum = input("Enter the maximum number: ")
+
+    randomNumber = random.randint(int(minimum)+1, int(maximum)-1)
+    print("The random number between" + minimum+ " and" + maximum + " is " + str(randomNumber))
+    print()
+    print("Thank you for using the Random Number Generator! Refresh to choose another option.")
+elif choice == '6':
+    print()
+    print()
+    print("HANGMAN")
+    print()
+    print("Guess the letters in the word one at a time. You have seven attempts to guess the word correctly.")
+    print()
+
+    word = "PYTHON"
+    firstLetter = "_"
+    secondLetter = "_"
+    thirdLetter = "_"
+    fourthLetter = "_"
+    fifthLetter = "_"
+    sixthLetter = "_"
+
+    print("Guess the word: ")
+    print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    print()
+
+    guess1 = input("Enter your first letter guess (in uppercase): ")
+    if guess1 == "P":
+        firstLetter = "P"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess1 == "Y":
+        secondLetter = "Y"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess1 == "T":
+        thirdLetter = "T"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess1 == "H":
+        fourthLetter = "H"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess1 == "O":
+        fifthLetter = "O"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess1 == "N":
+        sixthLetter = "N"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    else:
+        print("Incorrect guess.")
+        #print() get already used letters to show up
+    
+    print()
+    guess2 = input("Enter your second letter guess (in uppercase): ")
+    if guess2 == "P":
+        firstLetter = "P"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess2 == "Y":
+        secondLetter = "Y"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess2 == "T":
+        thirdLetter = "T"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess2 == "H":
+        fourthLetter = "H"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess2 == "O":
+        fifthLetter = "O"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess2 == "N":
+        sixthLetter = "N"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    else:
+        print("Incorrect guess.")
+        #print() get already used letters to show up
+    
+    print()
+    guess3 = input("Enter your third letter guess (in uppercase): ")
+    if guess3 == "P":
+        firstLetter = "P"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess3 == "Y":
+        secondLetter = "Y"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess3 == "T":
+        thirdLetter = "T"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess3 == "H":
+        fourthLetter = "H"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess3 == "O":
+        fifthLetter = "O"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess3 == "N":
+        sixthLetter = "N"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    else:
+        print("Incorrect guess.")
+        #print() get already used letters to show up
+
+    print()
+    guess4 = input("Enter your fourth letter guess (in uppercase): ")
+    if guess4 == "P":
+        firstLetter = "P"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess4 == "Y":
+        secondLetter = "Y"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess4 == "T":
+        thirdLetter = "T"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess4 == "H":
+        fourthLetter = "H"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess4 == "O":
+        fifthLetter = "O"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess4 == "N":
+        sixthLetter = "N"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    else:
+        print("Incorrect guess.")
+        #print() get already used letters to show up
+
+    print()
+    guess5 = input("Enter your fifth letter guess (in uppercase): ")
+    if guess5 == "P":
+        firstLetter = "P"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess5 == "Y":
+        secondLetter = "Y"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess5 == "T":
+        thirdLetter = "T"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess5 == "H":
+        fourthLetter = "H"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess5 == "O":
+        fifthLetter = "O"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess5 == "N":
+        sixthLetter = "N"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    else:
+        print("Incorrect guess.")
+        #print() get already used letters to show up
+
+    print()
+    guess6 = input("Enter your sixth letter guess (in uppercase): ")
+    if guess6 == "P":
+        firstLetter = "P"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess6 == "Y":
+        secondLetter = "Y"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess6 == "T":
+        thirdLetter = "T"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess6 == "H":
+        fourthLetter = "H"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess6 == "O":
+        fifthLetter = "O"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    elif guess6 == "N":
+        sixthLetter = "N"
+        print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+    else:
+        print("Incorrect guess.")
+        #print() get already used letters to show up
+
+    print()
+    if firstLetter == "P" and secondLetter == "Y" and thirdLetter == "T" and fourthLetter == "H" and fifthLetter == "O" and sixthLetter == "N":
+        print("Congratulations! You guessed the word correctly: PYTHON")
+        print("Thank you for playing Hangman! Refresh to choose another option.")
+    else:
+        print()
+        guess7 = input("Enter your seventh letter guess (in uppercase): ")
+        if guess7 == "P":
+            firstLetter = "P"
+            print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+        elif guess7 == "Y":
+            secondLetter = "Y"
+            print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+        elif guess7 == "T":
+            thirdLetter = "T"
+            print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+        elif guess7 == "H":
+            fourthLetter = "H"
+            print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+        elif guess7 == "O":
+            fifthLetter = "O"
+            print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+        elif guess7 == "N":
+            sixthLetter = "N"
+            print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
+        else:
+            print("Incorrect guess.")
+        #print() get already used letters to show up
+    
+    print()
+    if firstLetter == "P" and secondLetter == "Y" and thirdLetter == "T" and fourthLetter == "H" and fifthLetter == "O" and sixthLetter == "N":
+        print("Congratulations! You guessed the word correctly: PYTHON")
+        print("Thank you for playing Hangman! Refresh to choose another option.")
+    else:
+        print("Sorry, you did not guess the word correctly. Refresh to try again.")
