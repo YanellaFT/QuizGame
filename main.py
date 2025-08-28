@@ -469,5 +469,80 @@ elif choice == '7':
         print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3] + ", 5. " + list[4])
 
 
-    #TO DO: remove tasks code 
-  
+    #TO DO: remove tasks code
+    print()
+    print("What task did you complete? (1, 2, 3, 4, or 5)")
+    completed = input()
+    if completed == '1':
+        list.pop(0)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    elif completed == "2":
+        list.pop(1)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    elif completed == "3":
+        list.pop(2)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    elif completed == "4":
+        list.pop(3)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    elif completed == "5":
+        list.pop(4)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    
+    #remove another task
+    print()
+    print("What other task did you complete? (1, 2, 3, or 4)")
+    completed = input()
+    if completed == '1':
+        list.pop(0)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2])
+    elif completed == "2":
+        list.pop(1)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2])
+    elif completed == "3":
+        list.pop(2)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2])
+    elif completed == "4":
+        list.pop(3)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2])
+    
+    #remove another task
+    print()
+    print("What other task did you complete? (1, 2, or 3)")
+    completed = input()
+    if completed == '1':
+        list.pop(0)
+        print("1. " + list[0] + ", 2. " + list[1])
+    elif completed == "2":
+        list.pop(1)
+        print("1. " + list[0] + ", 2. " + list[1])
+    elif completed == "3":
+        list.pop(2)
+        print("1. " + list[0] + ", 2. " + list[1]) 
+
+    #remove another task
+    print()
+    print("What other task did you complete? (1 or 2)")
+    completed = input()
+    if completed == '1':
+        list.pop(0)
+        print("1. " + list[0])
+    elif completed == "2":
+        list.pop(1)
+        print("1. " + list[0])
+    
+    #remove last task
+    print()
+    print("Did you finish your last task? (yes or no)")
+    done = input()
+    if done == 'yes':
+        print()
+        print("Congratulations on completing all your tasks!")
+        print()
+        print("Thank you for using the To-Do List! Refresh to choose another option.")
+    else:
+        print()
+        print("1. " + list[0])
+        print("Keep going, you're doing great!")
+        print()
+        print("Thank you for using the To-Do List! Refresh to choose another option.")  
