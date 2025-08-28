@@ -6,8 +6,9 @@ print("3. Length Converter: converts inches to feet, yards, miles, millimeters, 
 print("4. Quiz Game: a fun quiz game")
 print("5. Random Number Generator: generates a random number between two numbers of your choice")
 print("6. Hangman: guess the word one letter at a time")
+print("7. To-do list: create your own to-do list and remove tasks from it as you complete them")
 print()
-choice = input("Enter 1, 2, 3, 4, 5, 6: ")
+choice = input("Enter 1, 2, 3, 4, 5, 6, 7: ")
 
 if choice == "1": 
     print()
@@ -388,3 +389,85 @@ elif choice == '6':
         print("Thank you for playing Hangman! Refresh to choose another option.")
     else:
         print("Sorry, you did not guess the word correctly. Refresh to try again.")
+elif choice == '7':
+    print()
+    print()
+    print("TO-DO LIST")
+    print()
+    print("Create your own to-do list and remove tasks from it as you complete them.")
+    print()
+
+    list = []
+
+    #add task1
+    print("Enter a task.")
+    task = input()
+    print("Is it a priority? (yes or no)")
+    priority = input()
+
+    list.insert(0, task)
+    print("1. " + list[0])
+
+
+    #ad task2
+    print()
+    print("Enter another task.")
+    task = input()
+    print("Is it a priority? (yes or no)")
+    priority = input()
+
+    if priority == 'yes':
+        list.insert(0, task)
+        print("1. " + list[0] + ", 2. " + list[1])
+    else:
+        list.append(task)
+        print("1. " + list[0] + ", 2. " + list[1])
+
+    
+    #add task3
+    print()
+    print("Enter another task.")
+    task = input()
+    print("Is it a priority? (yes or no)")
+    priority = input()
+
+    if priority == 'yes':
+        list.insert(0, task)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2])
+    else:
+        list.append(task)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2])
+    
+
+    #add task4
+    print()
+    print("Enter another task")
+    task = input()
+    print("Is it a priority? (yes or no)")
+    priority = input()
+
+    if priority == "yes" :
+        list.insert(0, task)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    else:
+        list.append(task)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3])
+    
+
+    #add task5
+    print()
+    print("Enter another task")
+    task = input()
+    print("Is it a priority? (yes or no)")
+    priority = input()
+
+    if priority == "yes" :
+        list.insert(0, task)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3] + ", 5. " + list[4])
+    else:
+        list.append(task)
+        print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3] + ", 5. " + list[4])
+
+
+    #TO DO: remove tasks code 
+  
