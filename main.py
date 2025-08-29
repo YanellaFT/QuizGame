@@ -1,14 +1,15 @@
 print("This is PyGames. You can play mini python games and quizes, as well as get useful conversions here. Choose one from the options below:")
 print()
 print("1. Time Converter: converts seconds to minutes, hours, days, weeks, months, and years")
-print("2. Roman Numeral Converter: roman numerals to integers")
+print("2. Roman Numeral Converter: roman numerals to integers") #DO THIS SOON
 print("3. Length Converter: converts inches to feet, yards, miles, millimeters, centimeters, meters, and kilometers")
 print("4. Quiz Game: a fun quiz game")
 print("5. Random Number Generator: generates a random number between two numbers of your choice")
 print("6. Hangman: guess the word one letter at a time")
 print("7. To-do list: create your own to-do list and remove tasks from it as you complete them")
+print("8. Spender-Checker: check if you have enough money to buy something")
 print()
-choice = input("Enter 1, 2, 3, 4, 5, 6, 7: ")
+choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8: ")
 
 if choice == "1": 
     print()
@@ -546,3 +547,43 @@ elif choice == '7':
         print("Keep going, you're doing great!")
         print()
         print("Thank you for using the To-Do List! Refresh to choose another option.")  
+elif choice == '8':
+    print()
+    print()
+    print("SPENDER-CHECKER")
+    print()
+    print("Check if you have enough money to buy something.")
+    print()
+
+    list = []
+    amount = input("How many things are you buying? ")
+    total = 0
+    print()
+    for x in range(int(amount)):
+        item = input("What is the item? ")
+        price = input("What is the price of " + item + "?      $")
+
+        list.append((item, "$" + price))
+        print(list)
+        total = total + int(price)
+
+        x+=1
+
+        print()
+        if x == int(amount):
+            print()
+            print("The total cost of your items is $" + str(total) + ".")
+            print()
+            money = input("How much money do you have?      $")
+            print()
+            if int(money) >= total:
+                change = int(money) - total
+                print("You have enough money to buy these items! Your change will be $" + str(change) + ".")
+                print()
+                print("Thank you for using the Spender-Checker! Refresh to choose another option.")
+            else:
+                difference = total - int(money)
+                print("You do not have enough money to buy these items. You need $" + str(difference) + " more.")
+                print()
+                print("Thank you for using the Spender-Checker! Refresh to choose another option.")
+
