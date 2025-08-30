@@ -8,6 +8,7 @@ print("5. Random Number Generator: generates a random number between two numbers
 print("6. Hangman: guess the word one letter at a time")
 print("7. To-do list: create your own to-do list and remove tasks from it as you complete them")
 print("8. Spender-Checker: check if you have enough money to buy something")
+print("9. Multiplier: learn your multiplication table")
 print()
 choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8: ")
 
@@ -586,4 +587,138 @@ elif choice == '8':
                 print("You do not have enough money to buy these items. You need $" + str(difference) + " more.")
                 print()
                 print("Thank you for using the Spender-Checker! Refresh to choose another option.")
+elif choice == '9':
+    print()
+    print()
+    print("MULTIPLIER")
+    print()
+    print("Learn your multiplication tables!")
+    print()
+
+    table = input("What multiplication table would you like to learn? (Enter 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12) ")
+    i = 0
+
+    if table == '2':
+        for x in range(0, 25, 2):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 2 is " + str(multiple))
+            if multiple == 24:
+                print()
+                print("You finished the 2 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+
+    elif table == '3':
+        for x in range(0, 37, 3):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 3 is " + str(multiple))
+            if multiple == 36:
+                print()
+                print("You finished the 3 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '4':
+        for x in range(0, 49, 4):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 4 is " + str(multiple))
+            if multiple == 48:
+                print()
+                print("You finished the 4 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '5':
+        for x in range(0, 61, 5):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 5 is " + str(multiple))
+            if multiple == 60:
+                print()
+                print("You finished the 5 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '6':
+        for x in range(0, 73, 6):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 6 is " + str(multiple))
+            if multiple == 72:
+                print()
+                print("You finished the 2 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '7':
+        for x in range(0, 85, 7):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 7 is " + str(multiple))
+            if multiple == 84:
+                print()
+                print("You finished the 7 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '8':
+        for x in range(0, 97, 8):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 8 is " + str(multiple))
+            if multiple == 96:
+                print()
+                print("You finished the 8 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '9':
+        for x in range(0, 109, 9):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 9 is " + str(multiple))
+            if multiple == 108:
+                print()
+                print("You finished the 9 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '10':
+        for x in range(0, 121, 10):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 10 is " + str(multiple))
+            if multiple == 120:
+                print()
+                print("You finished the 10 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '11':
+        for x in range(0, 133, 11):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 11 is " + str(multiple))
+            if multiple == 132:
+                print()
+                print("You finished the 11 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+    elif table == '12':
+        for x in range(0, 145, 12):
+            multiple = int(i)*int(table)
+            print(str(i) + " times 12 is " + str(multiple))
+            if multiple == 144:
+                print()
+                print("You finished the 12 times table!")
+                print("Thank you for using the Multiplier! Refresh to choose another option.")
+            else: 
+                input('Press ENTER to see next multiple')
+            i += 1
+
 
