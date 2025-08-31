@@ -9,8 +9,9 @@ print("6. Hangman: guess the word one letter at a time")
 print("7. To-do list: create your own to-do list and remove tasks from it as you complete them")
 print("8. Spender-Checker: check if you have enough money to buy something")
 print("9. Multiplier: learn your multiplication table")
+print("10. Calculator: standard calculator")
 print()
-choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8: ")
+choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8, 9, 10: ")
 
 if choice == "1": 
     print()
@@ -720,5 +721,18 @@ elif choice == '9':
             else: 
                 input('Press ENTER to see next multiple')
             i += 1
+elif choice == '10':
+    print()
+    print()
+    print("CALCULATOR")
+    print()
+    print()
+    print("Your standard calculator that can add, subtract, multiply and divide.")
+    print()
+
+    print("Type in the expression you want to sole.")
+    expression = input()
+    solve = eval(expression)
+    print("=" + str(solve))
 
 
