@@ -1,7 +1,7 @@
 print("This is PyGames. You can play mini python games and quizes, as well as get useful conversions here. Choose one from the options below:")
 print()
 print("1. Time Converter: converts seconds to minutes, hours, days, weeks, months, and years")
-print("2. Roman Numeral Converter: roman numerals to integers") #DO THIS SOON
+print("2. Rock, Paper, Scissor, Shoot! play with the computer")
 print("3. Length Converter: converts inches to feet, yards, miles, millimeters, centimeters, meters, and kilometers")
 print("4. Quiz Game: a fun quiz game")
 print("5. Random Number Generator: generates a random number between two numbers of your choice")
@@ -46,12 +46,88 @@ if choice == "1":
 elif choice == '2':
     print()
     print()
-    print("ROMAN NUMERAL CONVERTER")
+    print("ROCK, PAPER, SCISSOR, SHOOT!")
     print()
-    print("This program converts roman numerals to integers.")
+    print("Play the classic rock, paper, scissor shoot game.")
     print()
 
-    numeral = input("Enter a roman numeral (in uppercase letters): ")
+    list = ['rock', 'paper', 'scissor']
+    import random
+    score = 0
+    s = 0
+
+    print()
+    print("Enter either rock, paper, or scissor (all lowercase)")
+
+    for x in range(3):
+        print()
+        user = input("Your turn: ")
+        computer = random.choice(list)
+        print("The computer chose: " + computer)
+        
+        if (user == 'rock' and computer == 'scissor') or (user == 'paper' and computer == 'rock') or (user == 'scissor' and computer == 'paper'):
+            score = score + 1
+            print("You won this round! Score: " + str(score) + "/3")
+        elif user == computer:
+            print("Stalemate. ")
+            s = s + 1
+        else:
+            print("You lost this round. Score: " + str(score) + "/3")
+            
+    if s > 0:
+        for x in range(s):
+            print()
+            user = input("Your turn: ")
+            computer = random.choice(list)
+            print("The computer chose: " + computer)
+            
+            if (user == 'rock' and computer == 'scissor') or (user == 'paper' and computer == 'rock') or (user == 'scissor' and computer == 'paper'):
+                score = score + 1
+                print("You won this round! Score: " + str(score) + "/3")
+            elif user == computer:
+                print("Stalemate.")
+                print()
+                user = input("Your turn: ")
+                computer = random.choice(list)
+                print("The computer chose: " + computer)
+                if (user == 'rock' and computer == 'scissor') or (user == 'paper' and computer == 'rock') or (user == 'scissor' and computer == 'paper'):
+                    score = score + 1
+                    print("You won this round! Score: " + str(score) + "/3")
+                elif user == computer:
+                    print("Stalemate. ")
+                else:
+                    print("You lost this round. Score: " + str(score) + "/3")
+            else:
+                print("You lost this round. Score: " + str(score) + "/3")
+        
+    if s == 3:
+        for x in range(s + 1):
+            print()
+            user = input("Your turn: ")
+            computer = random.choice(list)
+            print("The computer chose: " + computer)
+            
+            if (user == 'rock' and computer == 'scissor') or (user == 'paper' and computer == 'rock') or (user == 'scissor' and computer == 'paper'):
+                score = score + 1
+                print("You won this round! Score: " + str(score) + "/3")
+            elif user == computer:
+                print("Stalemate.")
+                print()
+                user = input("Your turn: ")
+                computer = random.choice(list)
+                print("The computer chose: " + computer)
+                if (user == 'rock' and computer == 'scissor') or (user == 'paper' and computer == 'rock') or (user == 'scissor' and computer == 'paper'):
+                    score = score + 1
+                    print("You won this round! Score: " + str(score) + "/3")
+                elif user == computer:
+                    print("Stalemate. ")
+                else:
+                    print("You lost this round. Score: " + str(score) + "/3")
+            else:
+                print("You lost this round. Score: " + str(score) + "/3")
+
+    print("Thank you for playing Rock, Paper, Scissor, Shoot! Refresh to choose another option.")
+    
 elif choice == '3':
     print()
     print()
@@ -191,7 +267,7 @@ elif choice == '5':
     maximum = input("Enter the maximum number: ")
 
     randomNumber = random.randint(int(minimum)+1, int(maximum)-1)
-    print("The random number between" + minimum+ " and" + maximum + " is " + str(randomNumber))
+    print("The random number between " + minimum+ " and " + maximum + " is " + str(randomNumber))
     print()
     print("Thank you for using the Random Number Generator! Refresh to choose another option.")
 elif choice == '6':
@@ -391,7 +467,7 @@ elif choice == '6':
         print("Congratulations! You guessed the word correctly: PYTHON")
         print("Thank you for playing Hangman! Refresh to choose another option.")
     else:
-        print("Sorry, you did not guess the word correctly. Refresh to try again.")
+        print("Sorry, you did not guess the word correctly. Refresh to try again or choose another option.")
 elif choice == '7':
     print()
     print()
@@ -734,5 +810,8 @@ elif choice == '10':
     expression = input()
     solve = eval(expression)
     print("=" + str(solve))
+
+    print("Thank you for using the Multiplier! Refresh to choose another option.")
+
 
 
