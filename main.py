@@ -11,9 +11,9 @@ print("8. Spender-Checker: check if you have enough money to buy something")
 print("9. Multiplier: learn your multiplication table")
 print("10. Calculator: standard calculator")
 print()
-choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8, 9, 10: ")
+choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8, 9, or 10: ")
 
-if choice == "1": 
+if choice == "1": #time converter
     print()
     print()
     print("TIME CONVERTER")
@@ -43,7 +43,7 @@ if choice == "1":
 
     print()
     print("Thank you for using the Time Converter! Refresh to choose another option.")
-elif choice == '2':
+elif choice == '2': #rock, paper, scissor, shoot
     print()
     print()
     print("ROCK, PAPER, SCISSOR, SHOOT!")
@@ -54,7 +54,7 @@ elif choice == '2':
     list = ['rock', 'paper', 'scissor']
     import random
     score = 0
-    s = 0
+    s = 0 #number of stalemates in first three rounds
 
     print()
     print("Enter either rock, paper, or scissor (all lowercase)")
@@ -99,7 +99,7 @@ elif choice == '2':
                     print("You lost this round. Score: " + str(score) + "/3")
             else:
                 print("You lost this round. Score: " + str(score) + "/3")
-        
+#figure out how to make it 3 rounds in case pic happens        
     if s == 3:
         for x in range(s + 1):
             print()
@@ -127,8 +127,7 @@ elif choice == '2':
                 print("You lost this round. Score: " + str(score) + "/3")
 
     print("Thank you for playing Rock, Paper, Scissor, Shoot! Refresh to choose another option.")
-    
-elif choice == '3':
+elif choice == '3': #length converter
     print()
     print()
     print("LENGTH CONVERTER")
@@ -161,7 +160,7 @@ elif choice == '3':
 
     print()
     print("Thank you for using the Length Converter! Refresh to choose another option.")
-elif choice == '4':
+elif choice == '4': #quiz game
     print()
     print()
     print("QUIZ GAME")
@@ -254,7 +253,7 @@ elif choice == '4':
     print("Results: You got " + str(score) + " out of 6 points correct!")
     print()
     print("Thank you for playing the Quiz Game! Refresh to choose another option.")
-elif choice == '5':
+elif choice == '5': #random number generator
     print()
     print()
     print("RANDOM NUMBER GENERATOR")
@@ -267,16 +266,18 @@ elif choice == '5':
     maximum = input("Enter the maximum number: ")
 
     randomNumber = random.randint(int(minimum)+1, int(maximum)-1)
-    print("The random number between " + minimum+ " and " + maximum + " is " + str(randomNumber))
+    print("The random number between " + minimum + " and " + maximum + " is " + str(randomNumber))
     print()
     print("Thank you for using the Random Number Generator! Refresh to choose another option.")
-elif choice == '6':
+elif choice == '6': #hangman
     print()
     print()
     print("HANGMAN")
     print()
     print("Guess the letters in the word one at a time. You have seven attempts to guess the word correctly.")
     print()
+
+    used = []
 
     word = "PYTHON"
     firstLetter = "_"
@@ -311,7 +312,8 @@ elif choice == '6':
         print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
     else:
         print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess1)
+        print("Incorrect letters: " + str(used))
     
     print()
     guess2 = input("Enter your second letter guess (in uppercase): ")
@@ -335,7 +337,8 @@ elif choice == '6':
         print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
     else:
         print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess2)
+        print("Incorrect letters: " + str(used))
     
     print()
     guess3 = input("Enter your third letter guess (in uppercase): ")
@@ -359,7 +362,8 @@ elif choice == '6':
         print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
     else:
         print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess3)
+        print("Incorrect letters: " + str(used))
 
     print()
     guess4 = input("Enter your fourth letter guess (in uppercase): ")
@@ -383,7 +387,8 @@ elif choice == '6':
         print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
     else:
         print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess4)
+        print("Incorrect letters: " + str(used))
 
     print()
     guess5 = input("Enter your fifth letter guess (in uppercase): ")
@@ -407,7 +412,8 @@ elif choice == '6':
         print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
     else:
         print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess5)
+        print("Incorrect letters: " + str(used))
 
     print()
     guess6 = input("Enter your sixth letter guess (in uppercase): ")
@@ -431,7 +437,8 @@ elif choice == '6':
         print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
     else:
         print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess6)
+        print("Incorrect letters: " + str(used))
 
     print()
     if firstLetter == "P" and secondLetter == "Y" and thirdLetter == "T" and fourthLetter == "H" and fifthLetter == "O" and sixthLetter == "N":
@@ -460,7 +467,8 @@ elif choice == '6':
             print(firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter)
         else:
             print("Incorrect guess.")
-        #print() get already used letters to show up
+        used.append(guess7)
+        print("Incorrect letters: " + str(used))
     
     print()
     if firstLetter == "P" and secondLetter == "Y" and thirdLetter == "T" and fourthLetter == "H" and fifthLetter == "O" and sixthLetter == "N":
@@ -468,7 +476,7 @@ elif choice == '6':
         print("Thank you for playing Hangman! Refresh to choose another option.")
     else:
         print("Sorry, you did not guess the word correctly. Refresh to try again or choose another option.")
-elif choice == '7':
+elif choice == '7': #to-do list
     print()
     print()
     print("TO-DO LIST")
@@ -488,7 +496,7 @@ elif choice == '7':
     print("1. " + list[0])
 
 
-    #ad task2
+    #add task2
     print()
     print("Enter another task.")
     task = input()
@@ -548,7 +556,7 @@ elif choice == '7':
         print("1. " + list[0] + ", 2. " + list[1] + ", 3. " + list[2] + ", 4. " + list[3] + ", 5. " + list[4])
 
 
-    #TO DO: remove tasks code
+    #remove tasks
     print()
     print("What task did you complete? (1, 2, 3, 4, or 5)")
     completed = input()
@@ -625,7 +633,7 @@ elif choice == '7':
         print("Keep going, you're doing great!")
         print()
         print("Thank you for using the To-Do List! Refresh to choose another option.")  
-elif choice == '8':
+elif choice == '8': #spender-checker
     print()
     print()
     print("SPENDER-CHECKER")
@@ -645,26 +653,26 @@ elif choice == '8':
         print(list)
         total = total + int(price)
 
-        x+=1
+        x=x+1
 
         print()
-        if x == int(amount):
-            print()
-            print("The total cost of your items is $" + str(total) + ".")
-            print()
-            money = input("How much money do you have?      $")
-            print()
-            if int(money) >= total:
-                change = int(money) - total
-                print("You have enough money to buy these items! Your change will be $" + str(change) + ".")
-                print()
-                print("Thank you for using the Spender-Checker! Refresh to choose another option.")
-            else:
-                difference = total - int(money)
-                print("You do not have enough money to buy these items. You need $" + str(difference) + " more.")
-                print()
-                print("Thank you for using the Spender-Checker! Refresh to choose another option.")
-elif choice == '9':
+    
+    print()
+    print("The total cost of your items is $" + str(total) + ".")
+    print()
+    money = input("How much money do you have?      $")
+    print()
+    if int(money) >= total:
+        change = int(money) - total
+        print("You have enough money to buy these items! Your change will be $" + str(change) + ".")
+        print()
+        print("Thank you for using the Spender-Checker! Refresh to choose another option.")
+    else:
+        difference = total - int(money)
+        print("You do not have enough money to buy these items. You need $" + str(difference) + " more.")
+        print()
+        print("Thank you for using the Spender-Checker! Refresh to choose another option.")
+elif choice == '9': #multiplier
     print()
     print()
     print("MULTIPLIER")
@@ -797,7 +805,8 @@ elif choice == '9':
             else: 
                 input('Press ENTER to see next multiple')
             i += 1
-elif choice == '10':
+elif choice == '10': #calculator
+    #doesnt really work... change it to a better idea???
     print()
     print()
     print("CALCULATOR")
