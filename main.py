@@ -9,7 +9,7 @@ print("6. Hangman: guess the word one letter at a time")
 print("7. To-do list: create your own to-do list and remove tasks from it as you complete them")
 print("8. Spender-Checker: check if you have enough money to buy something")
 print("9. Multiplier: learn your multiplication table")
-print("10. Calculator: standard calculator")
+print("10. Roman Numeral Converter: add two roman numerals together, and get their result in both integer and roman form")
 print()
 choice = input("Enter 1, 2, 3, 4, 5, 6, 7, 8, 9, or 10: ")
 
@@ -99,7 +99,7 @@ elif choice == '2': #rock, paper, scissor, shoot
                     print("You lost this round. Score: " + str(score) + "/3")
             else:
                 print("You lost this round. Score: " + str(score) + "/3")
-#figure out how to make it 3 rounds in case pic happens        
+    #figure out how to make it 3 rounds in case pic happens        
     if s == 3:
         for x in range(s + 1):
             print()
@@ -805,22 +805,46 @@ elif choice == '9': #multiplier
             else: 
                 input('Press ENTER to see next multiple')
             i += 1
-elif choice == '10': #calculator
-    #doesnt really work... change it to a better idea???
+elif choice == '10': #roman numeral converter
     print()
     print()
-    print("CALCULATOR")
+    print("ROMAN NUMERAL CONVERTER")
     print()
     print()
-    print("Your standard calculator that can add, subtract, multiply and divide.")
+    print("Add two roman numerals together, and their their results in both integer and roman form.")
     print()
 
-    print("Type in the expression you want to sole.")
-    expression = input()
-    solve = eval(expression)
-    print("=" + str(solve))
 
-    print("Thank you for using the Multiplier! Refresh to choose another option.")
+    roman1 = input("Enter a roman numeral: ")
+    roman1split = " ".join(roman1)
+    roman1num = roman1split.split()
+    print(f"roman1split = {roman1split}")
+    print(f"roman1num = {roman1num}")
+
+    roman1 = []
+
+    #CHANGES ROMAN TO NUMBERS
+    for i in range(len(roman1split)):
+        
+        if roman1split[i] == "I":
+            roman1num = roman1split.replace('I', '1')
+            roman1 = roman1(0,(int(1))) #doesnt work... doesnt save last change if like II
+        elif roman1split[i] == "V": 
+            print("V test")
+
+        print("\n+++++++++++++++++\n")
+        print(roman1num)
+        roman1numSplit = " ".join(roman1num)
+        roman1numSplit = roman1numSplit.split()
+        print(roman1numSplit)
+        
+        for n in range(len(roman1numSplit)):
+            number1 = str(int(roman1numSplit[n-1]) + int(roman1numSplit[n]))
+
+        print(number1)
+        '''
+
+    print("Thank you for using the Roman Numeral Converter! Refresh to choose another option.")
 
 
 
