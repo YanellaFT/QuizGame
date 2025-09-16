@@ -815,7 +815,9 @@ elif choice == '10': #roman numeral converter
     print()
 
 
+
     roman1 = input("Enter a roman numeral: ")
+    roman1 = roman1.upper() #check this to make sure it works
     roman1split = " ".join(roman1)
     roman1num = roman1split.split()
     print(f"roman1split = {roman1split}")
@@ -827,11 +829,38 @@ elif choice == '10': #roman numeral converter
     for i in range(len(roman1split)):
         
         if roman1split[i] == "I":
-            roman1num = roman1split.replace('I', '1')
-            roman1 = roman1(0,(int(1))) #doesnt work... doesnt save last change if like II
+            #roman1num = roman1split.replace('I', '1') dont need this is append on a different list
+            roman1.append(int(1))
+            print(roman1) #this like to check if working       
         elif roman1split[i] == "V": 
-            print("V test")
+            roman1.append(int(5))
+            print(roman1)
+        elif roman1split[i] == "X":
+            roman1.append(int(10))
+            print(roman1)
+        elif roman1split[i] == "L":
+            roman1.append(int(50))
+            print(roman1)
+        elif roman1split[i] == "C":
+            roman1.append(int(100)):
+            print(roman1)
+        elif roman1split[i] == "D":
+            roman1.append(int(500))
+            print(roman1)
+        elif roman1split[i] == "M":
+            roman1.append(int(1000))
+            print(roman1)
 
+    #CHECK FOR SUBTRACTING CASES
+    for h in range(len(roman1)):
+        if roman1[h] == 1 and roman[h+1] == 5:
+            roman1[h] = 4
+            roman1[h+1] = 0
+        
+
+
+
+           '''
         print("\n+++++++++++++++++\n")
         print(roman1num)
         roman1numSplit = " ".join(roman1num)
