@@ -831,7 +831,7 @@ elif choice == '10': #roman numeral converter
         if roman1split[i] == "I":
             #roman1num = roman1split.replace('I', '1') dont need this is append on a different list
             roman1.append(int(1))
-            print(roman1) #this like to check if working       
+            print(roman1) #this line to check if working       
         elif roman1split[i] == "V": 
             roman1.append(int(5))
             print(roman1)
@@ -842,7 +842,7 @@ elif choice == '10': #roman numeral converter
             roman1.append(int(50))
             print(roman1)
         elif roman1split[i] == "C":
-            roman1.append(int(100)):
+            roman1.append(int(100))
             print(roman1)
         elif roman1split[i] == "D":
             roman1.append(int(500))
@@ -850,28 +850,44 @@ elif choice == '10': #roman numeral converter
         elif roman1split[i] == "M":
             roman1.append(int(1000))
             print(roman1)
-
+''' dont think you need this...
+    #ADDS EXTRA INDEXES FOR NEXT STEP
+    if len(roman1) == 2:
+        roman1.append(0)
+    elif len(roman1) == 1:
+        roman1.append(0)
+        roman1.append(0)
+'''    
     #CHECK FOR SUBTRACTING CASES
     for h in range(len(roman1)):
-        if roman1[h] == 1 and roman[h+1] == 5:
+        if roman1[h] == 1 and roman1[h+1] == 5:
             roman1[h] = 4
+            roman1[h+1] = 0 #check to see if .pop works
+            print(roman1) #this line to check if working
+        elif roman1[h] == 1 and roman1[h+1] == 10:
+            roman1[h] = 9
             roman1[h+1] = 0
-        
+            print(roman1)
+        elif roman1[h] == 10 and roman1[h+1] == 50:
+            roman1[h] = 40
+            roman1[h+1] = 0
+            print(roman1)
+        elif roman1[h] == 10 and roman1[h+1] == 100: 
+            roman1[h] = 90
+            roman1[h+1] = 0
+            print(roman1)
+        elif roman1[h] == 100 and roman1[h+1] == 500:
+            roman1[h] = 400
+            roman1[h+1] = 0
+            print(roman1)
+        elif roman1[h] == 100 and roman1[h+1] == 1000:
+            roman1[h] = 900
+            roman1[h+1] = 0
+            print(roman1)
+        asd
 
 
-
-           '''
-        print("\n+++++++++++++++++\n")
-        print(roman1num)
-        roman1numSplit = " ".join(roman1num)
-        roman1numSplit = roman1numSplit.split()
-        print(roman1numSplit)
-        
-        for n in range(len(roman1numSplit)):
-            number1 = str(int(roman1numSplit[n-1]) + int(roman1numSplit[n]))
-
-        print(number1)
-        '''
+         
 
     print("Thank you for using the Roman Numeral Converter! Refresh to choose another option.")
 
