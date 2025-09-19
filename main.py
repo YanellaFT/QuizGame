@@ -850,14 +850,15 @@ elif choice == '10': #roman numeral converter
         elif roman1split[i] == "M":
             roman1.append(int(1000))
             #print(roman1)
-''' dont think you need this...
+
+''' dont think you need this...'''
     #ADDS EXTRA INDEXES FOR NEXT STEP
     if len(roman1) == 2:
         roman1.append(0)
     elif len(roman1) == 1:
         roman1.append(0)
         roman1.append(0)
-'''    
+   
 
     #CHECK FOR SUBTRACTING CASES
     for h in range(len(roman1)):
@@ -892,7 +893,7 @@ elif choice == '10': #roman numeral converter
     print()
     roman2 = input("Enter another roman numeral: ")
     roman2 = roman2.upper()
-    roman2.split = " ".join(roman2)
+    roman2split = " ".join(roman2)
     roman2num = roman2split.split()
     #print(f"roman2split = {roman2split}")
     #print(f"roman2num = {roman2num}")
@@ -922,7 +923,16 @@ elif choice == '10': #roman numeral converter
         elif roman2split[j] =="M":
             roman2.append(int(1000))
             #print(roman2)
-        
+
+
+''' dont think you need this...'''
+    #ADDS EXTRA INDEXES FOR NEXT STEP
+    if len(roman2) == 2:
+        roman2.append(0)
+    elif len(roman2) == 1:
+        roman2.append(0)
+        roman2.append(0)
+
     #CHECK FOR SUBTRACTING ONES
     for k in range(len(roman2)):
         if roman2[k] == 1 and roman2[k+1] == 5:
@@ -940,7 +950,7 @@ elif choice == '10': #roman numeral converter
         elif roman2[k] == 100 and roman2[k+1] == 500:
             roman2[k] = 400
             roman2[k+1] = 0
-        elif roman2[k] = 100 and roman2[k+1] == 1000:
+        elif roman2[k] == 100 and roman2[k+1] == 1000:
             roman2[k] = 900
             roman2[k+1] = 0
 
@@ -950,11 +960,8 @@ elif choice == '10': #roman numeral converter
 
     # ADDS THEM TOGETHER FOR TOTAL
     print()
-    total = number1 + nnnnnnnnumber2
+    total = number1 + number2
     print("Adding them together you get: " + str(total))
-
-    
-        # did not check roman2 for errors!!!
 
          
 
