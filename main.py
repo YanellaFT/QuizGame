@@ -886,10 +886,80 @@ elif choice == '10': #roman numeral converter
             roman1[h+1] = 0
             #print(roman1)
         
+    number1 = sum(roman1)
+    print(f"Integer value: {number1}")
+
+    print()
+    roman2 = input("Enter another roman numeral: ")
+    roman2 = roman2.upper()
+    roman2.split = " ".join(roman2)
+    roman2num = roman2split.split()
+    #print(f"roman2split = {roman2split}")
+    #print(f"roman2num = {roman2num}")
+    
+    roman2 = []
+
+    #CHANGES ROMAN TO NUMBERS
+    for j in range(len(roman2split)):
+        if roman2split[j] == "I":
+            roman2.append(int(1))
+            #print(roman2)
+        elif roman2split[j] == "V":
+            roman2.append(int(5))
+            #print(roman2)
+        elif roman2split[j] == "X":
+            roman2.append(int(10))
+            #print(roman2)
+        elif roman2split[j] == "L":
+            roman2.append(int(50))
+            #print(roman2)
+        elif roman2split[j] == "C":
+            roman2.append(int(100))
+            #print(roman2)
+        elif roman2split[j] == "D":
+            roman2.append(int(500))
+            #print(roman2)
+        elif roman2split[j] =="M":
+            roman2.append(int(1000))
+            #print(roman2)
+        
+    #CHECK FOR SUBTRACTING ONES
+    for k in range(len(roman2)):
+        if roman2[k] == 1 and roman2[k+1] == 5:
+            roman2[k] = 4
+            roman2[k+1] = 0
+        elif roman2[k] == 1 and roman2[k+1] == 10:
+            roman2[k] = 9
+            roman2[k+1] = 0
+        elif roman2[k] == 10 and roman2[k+1] == 50:
+            roman2[k] = 40
+            roman2[k+1] = 0
+        elif roman2[k] == 10 and roman2[k+1] == 100:
+            roman2[k] = 90
+            roman2[k+1] = 0
+        elif roman2[k] == 100 and roman2[k+1] == 500:
+            roman2[k] = 400
+            roman2[k+1] = 0
+        elif roman2[k] = 100 and roman2[k+1] == 1000:
+            roman2[k] = 900
+            roman2[k+1] = 0
+
+    #CONVERTS TO INTEGER
+    number2 = sum(roman2)
+    print(f"Integer value: {number2}")
+
+    # ADDS THEM TOGETHER FOR TOTAL
+    print()
+    total = number1 + nnnnnnnnumber2
+    print("Adding them together you get: " + str(total))
+
+    
+        # did not check roman2 for errors!!!
 
          
 
     print("Thank you for using the Roman Numeral Converter! Refresh to choose another option.")
-
+else:
+    print("That was not an option. Please refresh and try again.")
 
 
