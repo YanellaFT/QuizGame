@@ -860,8 +860,9 @@ elif choice == '10': #roman numeral converter
         roman1.append(0)
    
 
+    h = 0
     #CHECK FOR SUBTRACTING CASES
-    for h in range(len(roman1)):
+    for c in range(len(roman1)-1):
         if roman1[h] == 1 and roman1[h+1] == 5:
             roman1[h] = 4
             roman1[h+1] = 0 #check to see if .pop works doesnt seem to work with index problems
@@ -886,6 +887,7 @@ elif choice == '10': #roman numeral converter
             roman1[h] = 900
             roman1[h+1] = 0
             #print(roman1)
+        h = h + 1
         
     number1 = sum(roman1)
     print(f"Integer value: {number1}")
@@ -900,8 +902,9 @@ elif choice == '10': #roman numeral converter
     
     roman2 = []
 
+    j = 0
     #CHANGES ROMAN TO NUMBERS
-    for j in range(len(roman2split)):
+    for b in range(len(roman2split)):
         if roman2split[j] == "I":
             roman2.append(int(1))
             #print(roman2)
@@ -923,6 +926,7 @@ elif choice == '10': #roman numeral converter
         elif roman2split[j] =="M":
             roman2.append(int(1000))
             #print(roman2)
+        j = j + 1
 
 
 ''' dont think you need this...'''
@@ -933,8 +937,9 @@ elif choice == '10': #roman numeral converter
         roman2.append(0)
         roman2.append(0)
 
+    k = 0
     #CHECK FOR SUBTRACTING ONES
-    for k in range(len(roman2)):
+    for a in range(len(roman2)-1):
         if roman2[k] == 1 and roman2[k+1] == 5:
             roman2[k] = 4
             roman2[k+1] = 0
@@ -953,6 +958,7 @@ elif choice == '10': #roman numeral converter
         elif roman2[k] == 100 and roman2[k+1] == 1000:
             roman2[k] = 900
             roman2[k+1] = 0
+        k = k + 1
 
     #CONVERTS TO INTEGER
     number2 = sum(roman2)
@@ -963,7 +969,32 @@ elif choice == '10': #roman numeral converter
     total = number1 + number2
     print("Adding them together you get: " + str(total))
 
-         
+    #CONVERTS BACK INTO BASE TEN
+    x = len(str(total))
+    print()
+
+    if x == 2:
+        total = " ".join(str(total))
+        totalSplit = str(total).split()
+        totalSplit[0] = int(totalSplit[0])*10
+    elif x == 3:
+        total = " ".join(str(total))
+        totalSplit = str(total).split()
+        totalSplite[0] = totalSplit[0]*100
+        totalSplit[1] = int(totalSplit[1])*10
+    elif x == 4:
+        total = " ".join(str(total))
+        totalSplit = str(total).split()
+        totalSplit[0] = int(totalSplit[0])*1000
+        totalSplit[1] = int(totalSplit[1])*100
+        totalSplit[2] = int(totalSplit[2])*10
+    else:
+        print("This number does not exist in roman numerals.")
+
+    
+    #CONVERTS BACK INTO ROMAN
+    p = 0
+    
 
     print("Thank you for using the Roman Numeral Converter! Refresh to choose another option.")
 else:
