@@ -820,8 +820,8 @@ elif choice == '10': #roman numeral converter
     roman1 = roman1.upper() #check this to make sure it works
     roman1split = " ".join(roman1)
     roman1num = roman1split.split()
-    print(f"roman1split = {roman1split}")
-    print(f"roman1num = {roman1num}")
+    #print(f"roman1split = {roman1split}")
+    #print(f"roman1num = {roman1num}")
 
     roman1 = []
 
@@ -851,7 +851,7 @@ elif choice == '10': #roman numeral converter
             roman1.append(int(1000))
             #print(roman1)
 
-''' dont think you need this...'''
+    ''' dont think you need this...'''
     #ADDS EXTRA INDEXES FOR NEXT STEP
     if len(roman1) == 2:
         roman1.append(0)
@@ -887,6 +887,9 @@ elif choice == '10': #roman numeral converter
             roman1[h] = 900
             roman1[h+1] = 0
             #print(roman1)
+        elif roman1[h] == 50 and roman1[h+1] == 100:
+            roman1[h] = 50
+            roman1[h+1] = 0
         h = h + 1
         
     number1 = sum(roman1)
@@ -929,7 +932,7 @@ elif choice == '10': #roman numeral converter
         j = j + 1
 
 
-''' dont think you need this...'''
+    ''' dont think you need this...'''
     #ADDS EXTRA INDEXES FOR NEXT STEP
     if len(roman2) == 2:
         roman2.append(0)
@@ -958,6 +961,9 @@ elif choice == '10': #roman numeral converter
         elif roman2[k] == 100 and roman2[k+1] == 1000:
             roman2[k] = 900
             roman2[k+1] = 0
+        elif roman2[k] == 50 and roman2[k+1] == 100:
+            roman2[k] = 50
+            roman2[k+1] = 0
         k = k + 1
 
     #CONVERTS TO INTEGER
@@ -971,23 +977,30 @@ elif choice == '10': #roman numeral converter
 
     #CONVERTS BACK INTO BASE TEN
     x = len(str(total))
-    print()
+    #print()
 
     if x == 2:
         total = " ".join(str(total))
         totalSplit = str(total).split()
         totalSplit[0] = int(totalSplit[0])*10
+        totalSplit[1] = int(totalSplit[1])*1
     elif x == 3:
         total = " ".join(str(total))
         totalSplit = str(total).split()
         totalSplite[0] = totalSplit[0]*100
         totalSplit[1] = int(totalSplit[1])*10
+        totalSplit[2] = int(totalSplit[2])*1
     elif x == 4:
         total = " ".join(str(total))
         totalSplit = str(total).split()
         totalSplit[0] = int(totalSplit[0])*1000
         totalSplit[1] = int(totalSplit[1])*100
         totalSplit[2] = int(totalSplit[2])*10
+        totalSplit[3] = int(totalSplit[3])*1
+    elif x == 1:
+        total = " ".join(str(total))
+        totalSplit = str(total).split()
+        totalSplit[0] = int(totalSplit[0])*1
     else:
         print("This number does not exist in roman numerals.")
 
@@ -997,73 +1010,107 @@ elif choice == '10': #roman numeral converter
     for y in range(len(totalSplit)):
         if totalSplit[p] == 1:
             totalSplit[p] = "I"
+            p=p+1
         elif totalSplit[p] == 2:
             totalSplit[p] = "II"
+            p=p+1
         elif totalSplit[p] == 3:
             totalSplit[p] = "III"
+            p=p+1
         elif totalSplit[p] == 4:
             totalSplit[p] = "IV"
+            p=p+1
         elif totalSplit[p] == 5:
             totalSplit[p] = "V"
+            p=p+1
         elif totalSplit[p] == 6:
             totalSplit[p] = "VI"
+            p=p+1
         elif totalSplit[p] == 7:
-            totalSplit[p] = "VII":
+            totalSplit[p] = "VII"
+            p=p+1
         elif totalSplit[p] == 8:
             totalSplit[p] = "VIII"
+            p=p+1
         elif totalSplit[p] == 9:
             totalSplit[p] = "IX"
+            p=p+1
 
         elif totalSplit[p] == 10:
             totalSplit[p] = "X"
+            p=p+1
         elif totalSplit[p] == 20:
             totalSplit[p] = "XX"
+            p=p+1
         elif totalSplit[p] == 30:
             totalSplit[p] = "XXX"
+            p=p+1
         elif totalSplit[p] == 40:
             totalSplit[p] = "XL"
+            p=p+1
         elif totalSplit[p] == 50:
             totalSplit[p] = "L"
+            p=p+1
         elif totalSplit[p] == 60:
             totalSplit[p] = "LX"
+            p=p+1
         elif totalSplit[p] == 70:
             totalSplit[p] = "LXX"
+            p=p+1
         elif totalSplit[p] == 80:
             totalSplit[p] = "LXXX"
+            p=p+1
         elif totalSplit[p] == 90:
             totalSplit[p] = "XC"
+            p=p+1
 
         elif totalSplit[p] == 100:
             totalSplit[p] = "C"
+            p=p+1
         elif totalSplit[p] == 200:
             totalSplit[p] = "CC"
+            p=p+1
         elif totalSplit[p] == 300:
             totalSplit[p] = "CCC"
+            p=p+1
         elif totalSplit[p] == 400:
             totalSplit[p] = "CD"
+            p=p+1
         elif totalSplit[p] == 500:
             totalSplit[p] = "D"
+            p=p+1
         elif totalSplit[p] == 600:
             totalSplit[p] = "DC"
+            p=p+1
         elif totalSplit[p] == 700:
             totalSplit[p] = "DCC"
+            p=p+1
         elif totalSplit[p] == 800:
             totalSplit[p] = "DCCC"
+            p=p+1
         elif totalSplit[p] == 900:
             totalSplit[p] = "CM"
+            p=p+1
         
         elif totalSplit[p] == 1000:
             totalSplit[p] = "M"
+            p=p+1
         elif totalSplit[p] == 2000:
             totalSplit[p] = "MM"
+            p=p+1
         elif totalSplit[p] == 3000:
             totalSplit[p] = "MMM"
+            p=p+1
         
         else:
-            totalSplit.pop(p)
+            totalSplit[p] = ""
+            p=p+1
         
-        p = p+1
-        print(totalSplit)
+        #print(totalSplit)
+    
+    end = "".join(totalSplit)
+    print(f"Which is {end} in roman numerals.")
+    print()
     
 
     print("Thank you for using the Roman Numeral Converter! Refresh to choose another option.")
