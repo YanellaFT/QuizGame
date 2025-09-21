@@ -994,6 +994,76 @@ elif choice == '10': #roman numeral converter
     
     #CONVERTS BACK INTO ROMAN
     p = 0
+    for y in range(len(totalSplit)):
+        if totalSplit[p] == 1:
+            totalSplit[p] = "I"
+        elif totalSplit[p] == 2:
+            totalSplit[p] = "II"
+        elif totalSplit[p] == 3:
+            totalSplit[p] = "III"
+        elif totalSplit[p] == 4:
+            totalSplit[p] = "IV"
+        elif totalSplit[p] == 5:
+            totalSplit[p] = "V"
+        elif totalSplit[p] == 6:
+            totalSplit[p] = "VI"
+        elif totalSplit[p] == 7:
+            totalSplit[p] = "VII":
+        elif totalSplit[p] == 8:
+            totalSplit[p] = "VIII"
+        elif totalSplit[p] == 9:
+            totalSplit[p] = "IX"
+
+        elif totalSplit[p] == 10:
+            totalSplit[p] = "X"
+        elif totalSplit[p] == 20:
+            totalSplit[p] = "XX"
+        elif totalSplit[p] == 30:
+            totalSplit[p] = "XXX"
+        elif totalSplit[p] == 40:
+            totalSplit[p] = "XL"
+        elif totalSplit[p] == 50:
+            totalSplit[p] = "L"
+        elif totalSplit[p] == 60:
+            totalSplit[p] = "LX"
+        elif totalSplit[p] == 70:
+            totalSplit[p] = "LXX"
+        elif totalSplit[p] == 80:
+            totalSplit[p] = "LXXX"
+        elif totalSplit[p] == 90:
+            totalSplit[p] = "XC"
+
+        elif totalSplit[p] == 100:
+            totalSplit[p] = "C"
+        elif totalSplit[p] == 200:
+            totalSplit[p] = "CC"
+        elif totalSplit[p] == 300:
+            totalSplit[p] = "CCC"
+        elif totalSplit[p] == 400:
+            totalSplit[p] = "CD"
+        elif totalSplit[p] == 500:
+            totalSplit[p] = "D"
+        elif totalSplit[p] == 600:
+            totalSplit[p] = "DC"
+        elif totalSplit[p] == 700:
+            totalSplit[p] = "DCC"
+        elif totalSplit[p] == 800:
+            totalSplit[p] = "DCCC"
+        elif totalSplit[p] == 900:
+            totalSplit[p] = "CM"
+        
+        elif totalSplit[p] == 1000:
+            totalSplit[p] = "M"
+        elif totalSplit[p] == 2000:
+            totalSplit[p] = "MM"
+        elif totalSplit[p] == 3000:
+            totalSplit[p] = "MMM"
+        
+        else:
+            totalSplit.pop(p)
+        
+        p = p+1
+        print(totalSplit)
     
 
     print("Thank you for using the Roman Numeral Converter! Refresh to choose another option.")
