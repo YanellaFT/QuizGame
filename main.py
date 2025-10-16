@@ -987,7 +987,7 @@ elif choice == '10': #roman numeral converter
     elif x == 3:
         total = " ".join(str(total))
         totalSplit = str(total).split()
-        totalSplite[0] = totalSplit[0]*100
+        totalSplit[0] = totalSplit[0]*100
         totalSplit[1] = int(totalSplit[1])*10
         totalSplit[2] = int(totalSplit[2])*1
     elif x == 4:
