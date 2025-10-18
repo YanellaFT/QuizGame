@@ -1,5 +1,5 @@
-from flask import Flask, request, redirect, url_for, session, escape
-import random
+from flask import Flask, request, redirect, url_for, session, escape;
+import random;
 
 app = Flask(__name__)
 # NOTE: for production set a secure random secret key
